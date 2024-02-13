@@ -33,18 +33,17 @@
         header('Access-Control-Allow-Headers: Content-Type');
         header('Access-Control-Allow-Methods: POST');
         header('Access-Control-Allow-Origin: http://localhost:3000'); // Adjust this to match your frontend origin
-
+      
         // Check if it's a preflight request and exit early
         if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
             exit;
         }
          $title = $this->input->post('title');
-         $slug = url_title($this->input->post('title'));
+         $slug = $this->input->post('title');
          $body = $this->input->post('body');
          
          $data = array(
             'title' => $title,
-            'slug' => $slug,
             'body' => $body,
          );
 
