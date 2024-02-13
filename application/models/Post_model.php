@@ -13,4 +13,14 @@
     public function create_post($data){
         return $this->db->insert('posts', $data);
     }
+
+    public function delete_post($id){
+        $this->db->where('id', $id);
+        return $this->db->delete('posts');
+    }
+
+    public function update_post($id, $data){
+        $this->db->where('id', $id);
+        return $this->db->update('posts', $data);
+    }
 }

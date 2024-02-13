@@ -52,6 +52,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'api';
 $route['api/getdata'] = 'api/getdata';
 $route['api/getpost'] = 'api/getpost';
+$route['api/insertpost'] = 'api/insertpost';
+$route['api/deletepost'] = 'api/deletepost';
 $route['(:any)'] = 'api/index/$1';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
