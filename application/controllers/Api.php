@@ -35,12 +35,11 @@
          header('Access-Control-Allow-Origin: *');
 
          $title = $this->input->post('title');
-         $slug = url_title($this->input->post('title'));
+         $slug = $this->input->post('title');
          $body = $this->input->post('body');
          
          $data = array(
             'title' => $title,
-            'slug' => $slug,
             'body' => $body,
          );
 
